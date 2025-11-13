@@ -36,7 +36,7 @@ function analisarTexto(texto) {
         frequenciaPalavras: frequencia,
         tamanhoMedioPalavras: tamanhoTotal/contador,
     }
-}
+};
 
 const texto = "JavaScript é uma linguagem de programação. JavaScript é versátil e JavaScript é poderoso.";
 
