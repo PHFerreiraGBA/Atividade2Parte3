@@ -8,24 +8,24 @@ function formatarNome(nome) {
 };
 
 function normalizarUsuarios(json) {
-    const listaUsuarios = JSON.parse(json)
-    let listaFinal = []
+    const listaUsuarios = JSON.parse(json);
+    let listaFinal = [];
     
     for (let usuario of listaUsuarios) {
-        let nome = usuario.nome
-        nome = formatarNome(nome)
+        let nome = usuario.nome;
+        nome = formatarNome(nome);
         
-        const idade = parseInt(usuario.idade, 10)
-        const maiorDeIdade = idade > 18
+        const idade = parseInt(usuario.idade, 10);
+        const maiorDeIdade = idade > 18;
         
         const objeto = {
             nome,
             email: usuario.email.toLowerCase(),
             idade,
             maiorDeIdade,
-        }
-        listaFinal.push(objeto)
-    }
+        };
+        listaFinal.push(objeto);
+    };
      
     return JSON.stringify(listaFinal)
 }
@@ -36,4 +36,4 @@ const usuariosJSON = `[
  {"nome": "João Santos", "email": "joao@email.com", "idade": "17"}
 ]`;
 
-const normalizado = normalizarUsuarios(usuariosJSON)
+const normalizado = normalizarUsuarios(usuariosJSON);
