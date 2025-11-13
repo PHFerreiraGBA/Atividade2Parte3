@@ -24,11 +24,11 @@ function analisarTexto(texto) {
     // Converter frequenciaObjeto para a lista desejada
     const chave = Object.keys(frequenciaObjeto);
     const valor = Object.values(frequenciaObjeto);
-    let frequencia = []
+    let frequencia = [];
     
     for (let i in chave) {
         frequencia.push({palavra: chave[i], frequencia: valor[i]})
-    }
+    };
 
     // Retorno
     return {
